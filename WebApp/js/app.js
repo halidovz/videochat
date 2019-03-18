@@ -257,6 +257,7 @@ function createCall() {
   $('#callButton').remove();
   $('#cancelButton').click(function() {
     currentCall.hangup();
+    closeConnection();
   });
   log("Calling to "+document.getElementById('phonenum').value);
   outboundCall = currentCall = voxAPI.call(
